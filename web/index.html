@@ -49,10 +49,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#about">Reservar Cita</a>
+                        <a href="#about" id="Registrar_Cita">Reservar Cita</a>
                     </li>
                     <li>
-                        <a href="#services">Editar Información Personal</a>
+                        <a href="#services" id="Editar_Informacion">Editar Información Personal</a>
                     </li>
                     <li>
                         <a href="#contact">Ver historial médico</a>
@@ -226,12 +226,210 @@
         </div>
     </footer>
 
+   
+    
+    <div class="modal fade" id="Mo_Editar_Informacion" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" align="center">Información Personal</h4>
+        </div>
+         
+            <div class="modal-body">
+
+              <form role="form" method="post" action="/pacientes" autocomplete="off">
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
+            <fieldset>
+
+          
+            </div></br>
+
+
+            <div class="form-group">
+                  <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+
+                  <div class="col-md-6 col-xs-10">
+                      <select id="Tipo_Paciente" name="tipo_paciente" placeholder="Tipo Paciente" class="form-control" required>
+                        <option value="ESTUDIANTE">ESTUDIANTE</option>
+                        <option value="PERSONA EXTERNA">PERSONA EXTERNA</option>
+                      </select>
+                  </div>
+            </div></br></br>
+
+
+
+            <div id="Seccion_General">
+                <div class="form-group">
+                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+
+                      <div class="col-md-6 col-xs-10">
+                          <input id="dni" name="dni" placeholder="DNI" class="form-control" required>
+                      </div>
+                </div></br></br>
+
+                <div class="form-group">
+                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-lock bigicon"></i></span>
+                      <div class="col-md-6 col-xs-10">
+                          <input id="Password" type="Password" name="contraseña" placeholder="Password" class="form-control" required>
+                      </div>
+                </div></br></br>
+
+                <div class="form-group">
+                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+
+                      <div class="col-md-6 col-xs-10">
+                          <input id="Nombres" name="nombres" placeholder="Nombres" class="form-control" required>
+                      </div>
+                </div></br></br>
+
+                <div class="form-group">
+                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+
+                      <div class="col-md-6 col-xs-10">
+                          <input id="Apellidos" name="apellidos" placeholder="Apellidos" class="form-control" required>
+                      </div>
+                </div></br></br>
+
+                <div class="form-group">
+                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-calendar bigicon"></i></span>
+
+                      <div class="col-md-6 col-xs-10">
+                          <input id="Fecha_Nacimiento" name="fecha_nacimiento" type ="date" placeholder="Fecha de Nacimiento" class="form-control" required>
+                      </div>
+                </div></br></br>
+
+               <div class="form-group">
+                    <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+
+                    <div class="col-md-6 col-xs-10">
+                        <select class="form-control" id="Sexo" name="sexo">
+                          <option>MASCULINO</option>
+                          <option>FEMENINO</option>
+                        </select>
+                    </div>
+              </div></br></br>
+
+
+              <div class="form-group">
+                    <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-phone bigicon"></i></span>
+
+                    <div class="col-md-6 col-xs-10">
+                        <input id="Telefono" name="telefono" placeholder="Teléfono" class="form-control" required>
+                    </div>
+              </div></br></br>
+
+                 <div class="form-group">
+                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+
+                      <div class="col-md-6 col-xs-10">
+                          <input id="E_mail" name="correo" placeholder="E-Mail" class="E_mail" required>
+                      </div>
+                </div></br></br>
+
+
+                <div class="form-group">
+                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-home bigicon"></i></span>
+
+                      <div class="col-md-6 col-xs-10">
+                          <input id="Direccion" name="direccion" placeholder="dirección" class="form-control" required>
+                      </div>
+                </div></br></br>
+
+                <div class="form-group">
+                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-home bigicon"></i></span>
+
+                      <div class="col-md-6 col-xs-10">
+                          <select id="Estado" name="estado" placeholder="Estado" class="form-control">
+                              <option>Habilitado</option>
+                              <option>Deshabilitado</option>
+                          </select>
+
+                      </div>
+                </div></br></br>
+
+
+                <div class="form-group">
+                      <div class="col-md-12 text-center">
+                          <input type="submit" style="width:80px" class="btn btn-success" align="center" class="form-control" value="Guardar">
+                          <button type="reset" style="width:80px" class="btn btn-primary" align="center" class="form-control" >Limpiar</button>
+
+                      </div>
+                </div></br></br>
+            </div>
+            </fieldset>
+
+
+       </form>
+
+              </div>
+              <input name="Id_Paciente" id="Id_Paciente" type="hidden" value="{{Auth::user()->dni}}">
+            </div>
+
+            <div class="modal-footer">
+              
+            </div>
+      </div>
+
+    </div>
+  </div>
+    
+    
+    <div class="modal fade" id="Mo_Registrar_Cita" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" align="center">Registrar Cita</h4>
+        </div>
+          <form role="form" method="get" action="/reservas_Almacenar" autocomplete="off">
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
+            <div class="modal-body">
+
+              <div id="Datos_Reserva">
+
+              </div>
+              <input name="Id_Paciente" id="Id_Paciente" type="hidden" value="{{Auth::user()->dni}}">
+            </div>
+
+            <div class="modal-footer">
+              <input type="submit" class="btn btn-primary" value="Confirmar">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+      </div>
+
+    </div>
+  </div>
+    
+    
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+       <script>
+ $(document).ready(function() {
+          $("#Editar_Informacion").click(function(event){
+            event.preventDefault();
+             $('#Mo_Editar_Informacion').modal({
+             show: 'true'
+           });
+           });
+           
+           $("#Registrar_Cita").click(function(event){
+            event.preventDefault();
+             $('#Mo_Registrar_Cita').modal({
+             show: 'true'
+           });
+        });
+    });
+</script>
 </body>
 
 </html>
