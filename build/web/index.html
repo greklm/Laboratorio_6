@@ -342,7 +342,7 @@
                       <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-home bigicon"></i></span>
 
                       <div class="col-md-6 col-xs-10">
-                          <select id="Estado" name="estado" placeholder="Estado" class="form-control">
+                          <select id="Estado" name="estado" class="form-control">
                               <option>Habilitado</option>
                               <option>Deshabilitado</option>
                           </select>
@@ -354,7 +354,7 @@
                 <div class="form-group">
                       <div class="col-md-12 text-center">
                           <input type="submit" style="width:80px" class="btn btn-success" align="center" class="form-control" value="Guardar">
-                          <button type="reset" style="width:80px" class="btn btn-primary" align="center" class="form-control" >Limpiar</button>
+                          <button type="reset" style="width:80px" class="btn btn-primary" class="form-control" >Limpiar</button>
 
                       </div>
                 </div></br></br>
@@ -402,11 +402,28 @@
             </div>
           </form>
       </div>
-
     </div>
   </div>
     
-    
+   
+  <div class="modal fade" id="Mo_Especialidades" role="dialog" >
+    <div class="modal-dialog" role="document">
+	<div class="modal-content">
+            <div class="modal-header">
+                    <h3 align="center" >Reservar una cita</h3><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body"  align="center">
+                <div id="Lista_Consultorios">
+                </div>
+            </div>
+            <div class="modal-footer" style="display:block;margin-left:0%;">
+              <button id="btn_Mostrar_Horario" style="width:250px"  type="button" class="btn btn-primary">Siguiente</button>
+            </div>
+	</div>
+    </div>
+</div>
+  
+  
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -422,13 +439,29 @@
            });
            });
            
-           $("#Registrar_Cita").click(function(event){
-            event.preventDefault();
-             $('#Mo_Registrar_Cita').modal({
+        $("#Registrar_Cita").click(function(event){
+         $.get('Listar_Especialidades', {}, function(responseText) {
+             $('#Lista_Consultorios').empty();
+             $('#Lista_Consultorios').append(responseText);
+             $('#Mo_Especialidades').modal({
              show: 'true'
-           });
+            });
+         });  
+
         });
     });
+</script>
+<script>
+$("#btn_Mostrar_Horario").click(function(event){
+ $.get('Listar_Especialidades', {}, function(responseText) {
+     $('#Lista_Consultorios').empty();
+     $('#Lista_Consultorios').append(responseText);
+     $('#Mo_Especialidades').modal({
+     show: 'true'
+    });
+ });  
+
+});
 </script>
 </body>
 
