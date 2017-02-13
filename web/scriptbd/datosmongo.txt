@@ -1,0 +1,22 @@
+db.Pacientes.insert({"dni":"12345678","contrase�a":"123456","apellidos":"Ccopa","nombres":"Jimmy","telefono":"983914752","correo":"jim_123@hotmail.com","direccion":"Av.Infancia 123","estado":"Habilitado","fecha_nac":"1990-11-19","sexo":"Masculino"});
+db.Pacientes.insert({"dni":"22222222","contrase�a":"123456","apellidos":"Escobar","nombres":"Elias","telefono":"987633547","correo":"eliase@hotmail.com","direccion":"AV. GARCILASO 1242","estado":"Habilitado","fecha_nac":"1995-09-05","sexo":"Masculino"});
+db.Pacientes.insert({"dni":"44445769","contrase�a":"123456","apellidos":"Villa","nombres":"Ana","telefono":"984651236","correo":"anitav@hotmail.com","direccion":"Av. Industrial 245","estado":"Habilitado","fecha_nac":"1997-06-09","sexo":"Femenino"});
+db.Pacientes.insert({"dni":"88335678","contrase�a":"123456","apellidos":"Lopez","nombres":"Lorena","telefono":"925413647","correo":"lolo@hotmail.com","direccion":"Jr. Bajo el Puente 555","estado":"Habilitado","fecha_nac":"1993-03-07","sexo":"Femenino"});
+db.Pacientes.insert({"dni":"94831111","contrase�a":"123456","apellidos":"Borda","nombres":"Alberto","telefono":"925345295","correo":"alberto@hotmail.com","direccion":"Jr. Peru 432","estado":"Habilitado","fecha_nac":"1994-02-19","sexo":"Masculino"});
+db.Consultorios.insert({"idConsultorio":"101","ubicacion":"Primer Piso"});
+db.Consultorios.insert({"idConsultorio":"102","ubicacion":"Primer Piso"});
+db.Consultorios.insert({"idConsultorio":"103","ubicacion":"Primer Piso"});
+db.Consultorios.insert({"idConsultorio":"201","ubicacion":"Segundo Piso"});
+db.Consultorios.insert({"idConsultorio":"202","ubicacion":"Segundo Piso"});
+db.Especialidades.insert({"codigo":"MEG","nombre":"Medicina General","estado":"Habilitado","idconsultorio":"101"});
+db.Especialidades.insert({"codigo":"TOP","nombre":"Topico","estado":"Habilitado","idconsultorio":"102"});
+db.Especialidades.insert({"codigo":"OFT","nombre":"Oftalmologia","estado":"Habilitado","idconsultorio":"103"});
+db.Especialidades.insert({"codigo":"ODO","nombre":"Odontologia","estado":"Habilitado","idconsultorio":"201"});
+db.Especialidades.insert({"codigo":"PSI","nombre":"Psiquiatria","estado":"Habilitado","idconsultorio":"202"});
+db.Medicos.insert({"idmedico":"MED00001","dni":"74586321","contrase�a":"123456","nombres":"Rene","Apellidos":"Estrada","fecha_nac":"1985-12-19","sexo":"Masculino","telefono":"984651245","correo":"rene_01@gmail.com","direccion":"Av. Los Robles 1234","estado":"Habilitado","especialidad_codigo":"MEG"});
+db.Medicos.insert({"idmedico":"MED00002","dni":"74586345","contrase�a":"123456","nombres":"Lidia","Apellidos":"Miranda","fecha_nac":"1980-05-20","sexo":"Femenino","telefono":"945651245","correo":"lidia_01@gmail.com","direccion":"Av. Los Bosques 234","estado":"Habilitado","especialidad_codigo":"TOP"});
+db.Medicos.insert({"idmedico":"MED00003","dni":"33586321","contrase�a":"123456","nombres":"Luis","Apellidos":"Prado","fecha_nac":"1990-01-01","sexo":"Masculino","telefono":"988651245","correo":"luis_01@gmail.com","direccion":"Av. Prado 324","estado":"Habilitado","especialidad_codigo":"OFT"});
+db.Medicos.insert({"idmedico":"MED00004","dni":"77346321","contrase�a":"123456","nombres":"Dario","Apellidos":"Huaman","fecha_nac":"1987-02-15","sexo":"Masculino","telefono":"98461545","correo":"dario_01@gmail.com","direccion":"Av. Los Frutales 1234","estado":"Habilitado","especialidad_codigo":"ODO"});
+db.Medicos.insert({"idmedico":"MED00005","dni":"12586321","contrase�a":"123456","nombres":"Luisa","Apellidos":"Ramos","fecha_nac":"1983-07-30","sexo":"Femenino","telefono":"945651245","correo":"luisa_01@gmail.com","direccion":"Av. Los Bosques 1234","estado":"Habilitado","especialidad_codigo":"PSI"});
+db.Usuario.insert({"user":"jhonriraito","passwordmd5":"e10adc3949ba59abbe56e057f20f883e","tipo":"medico","estado":1})
+db.Usuario.insert({"user":"jhonriraitop","passwordmd5":"81dc9bdb52d04dc20036dbd8313ed055","tipo":"paciente","estado":1})
