@@ -65,7 +65,7 @@
                         <a href="#contact">Ver historial médico</a>
                     </li>
                     <li>
-                        <a href="Inicio_Sesion.jsp">Iniciar Sesion</a>
+                        <a href="Inicio_Sesion.jsp">Cerrar Sesion</a>
                     </li>
                 </ul>
             </div>
@@ -83,20 +83,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Landing Page</h1>
-                        <h3>A Template by Start Bootstrap</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>
+                        <h1>Centro Medico UNSAAC</h1>
+                        <h3>SIEMPRE A TU SERVICIO</h3>
+                        <hr class="intro-divider">  
                     </div>
                 </div>
             </div>
@@ -108,21 +97,28 @@
     <!-- /.intro-header -->
 
     <!-- Page Content -->
-
-	<a  name="services"></a>
+<section id="services">
     <div class="content-section-a">
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
-                </div>
+                
+                    <div class="col-lg-12 col-sm-12" >
+                        <div align="center" class="dataTable_wrapper table-responsive" id="Mantenimiento_Contenido">
+                            
+                            <h1 id="Titulo_Mantenimiento"></h1>
+                            <button id="btn_Agregar" hidden="hidden">Agregar Nuevo</button></br></br>
+                            <input type="hidden" id="Nombre_Tabla" value="">
+                            <input type="hidden" class="Valores_Atributos" value="">
+                            <input type="hidden" class="Valores_Parametros" value="">
+                            <table class="table table-striped table-bordered table-hover" id="Tabla_Mantenimiento">
+                                
+                            </table>
+                            
+                            
+                        </div>
+                    </div>
+                
             </div>
 
         </div>
@@ -130,8 +126,11 @@
 
     </div>
     <!-- /.content-section-a -->
+</section>
+    
+    <!-- /.content-section-a -->
 
-    <div class="content-section-b">
+ <div class="content-section-b">
 
         <div class="container">
 
@@ -139,11 +138,11 @@
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                    <h2 class="section-heading">VISIÓN</h2>
+                    <p class="lead">La Visión del Centro Universitario de Salud es constituirse en un Establecimiento de Salud de Primer Nivel de Atención, de prestigio, competitivo con otras instituciones del sector, por los logros en la calidad de atención y la satisfacción de las necesidades de los usuarios, con Recursos Humanos motivados, comprometidos, capacitados permanentemente y orgullosos de pertenecer a él, de infraestructura adecuada, equipos modernos, operativos y con proyección a la comunidad.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
+                    <img class="img-responsive" src="img/3.jpg" alt="">
                 </div>
             </div>
 
@@ -152,20 +151,17 @@
 
     </div>
     <!-- /.content-section-b -->
-
     <div class="content-section-a">
-
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+                    <h2 class="section-heading">MISIÓN</h2>
+                    <p class="lead">La Misión del Centro Universitario de Salud es brindar atención integral de salud, de tipo ambulatoria a la comunidad universitaria de la Universidad Nacional San Antonio Abad del Cusco, a través de prestaciones de prevención, promoción, recuperación y prestaciones sociales con equidad, solidaridad, eficacia, eficiencia y calidad, primando el empleo racional de los recursos humanos, económicos, materiales y tecnológicos, con la participación activa de la comunidad universitaria, siendo su compromiso el bienestar de la misma.</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/phones.png" alt="">
+                    <img class="img-responsive" src="img/c1.jpg" alt="">
                 </div>
             </div>
 
@@ -173,36 +169,14 @@
         <!-- /.container -->
 
     </div>
+
     <!-- /.content-section-a -->
 
-	<a  name="contact"></a>
     <div class="banner">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to Start Bootstrap:</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
         </div>
         <!-- /.container -->
 
-    </div>
     <!-- /.banner -->
 
     <!-- Footer -->
@@ -210,24 +184,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Universidad Nacional de San Antonio Abad del Cusco<br>
+                        Av. de la Cultura, Nro. 733, Cusco - Perú - América Latina<br> 
+                        Telf. 51.84.604100 - 51.84.604160 - Fax 51.84.238156<BR>
+                        Apartado Postal Nro 921 - Cusco, Perú<br>
+© 2012 webmaster@unsaac.edu.pe</p>
                 </div>
             </div>
         </div>

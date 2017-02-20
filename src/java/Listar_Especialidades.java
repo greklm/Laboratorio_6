@@ -45,7 +45,7 @@ public class Listar_Especialidades extends HttpServlet {
             String Datos_Enviar ="<select id='Especialidad_Cita' name='Especialidad_Cita' class='form-control'>";
             while(Datos.hasNext()) {
             BasicDBObject obj = (BasicDBObject) Datos.next();
-               Datos_Enviar+="<option value='"+obj.getString("codigo")+"'>"+obj.getString("nombre")+"</option>";
+               Datos_Enviar+="<option value='"+obj.getString("CODIGO")+"'>"+obj.getString("NOMBRE")+"</option>";
             }
             
             Datos_Enviar+="</select>";
