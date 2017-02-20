@@ -100,7 +100,11 @@
                     <div class="intro-message">
                         <h1>Centro Medico UNSAAC</h1>
                         <h3>SIEMPRE A TU SERVICIO</h3>
+<<<<<<< HEAD
 
+=======
+                        <hr class="intro-divider">
+>>>>>>> origin/master
                     </div>
                 </div>
             </div>
@@ -143,6 +147,7 @@
     </div>
     <!-- /.content-section-a -->
 </section>
+    
     <div class="content-section-b">
 
         <div class="container">
@@ -187,16 +192,23 @@
     </div>
     <!-- /.content-section-a -->
 
+<<<<<<< HEAD
 
 	<a  name="contact"></a>
     <div class="banner">
 
         
+=======
+    <div class="banner">
+
+        <!-- /.container -->
+>>>>>>> origin/master
 
     </div>
     <!-- /.banner -->
 
        <!-- Footer -->
+    <!-- Footer -->
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -477,11 +489,11 @@
             event.preventDefault();
             location.href = '#services';
               $.get('Listar_Datos', {
-                        Coleccion : "Pacientes",Atributos:"dni,apellidos,nombres,telefono,correo,direccion,estado,fecha_nac,sexo"
+                        Coleccion : "Pacientes",Atributos:"DNI,APELLIDOS,NOMBRES,TELEFONO,CORREO,DIRECCION,ESTADO,FECHA NACIMIENTO,SEXO"
                 }, function(responseText) {
                         $('#btn_Agregar').show();
                         $('#Nombre_Tabla').val('Pacientes');
-                        $('.Valores_Atributos').val('dni,apellidos,nombres,telefono,correo,direccion,estado,fecha_nac,sexo');
+                        $('.Valores_Atributos').val('DNI,APELLIDOS,NOMBRES,TELEFONO,CORREO,DIRECCION,ESTADO,FECHA NACIMIENTO,SEXO');
                         $('#Tabla_Mantenimiento').empty();
                         $('#Titulo_Mantenimiento').empty();
                         $('#Titulo_Mantenimiento').text('Mantenimiento de Pacientes');
@@ -505,11 +517,11 @@
             event.preventDefault();
              location.href = '#services';
               $.get('Listar_Datos', {
-                        Coleccion : "Medicos",Atributos:"idmedico,dni,nombres,Apellidos,fecha_nac,sexo,telefono,correo,estado,direccion,estado,especialidad_codigo"
+                        Coleccion : "Medicos",Atributos:"IDMEDICO,DNI,NOMBRES,APELLIDOS,FECHA NACIMIENTO,SEXO,TELEFONO,CORREO,DIRECCION,ESTADO,CODIGO ESPECIALIDAD"
                 }, function(responseText) {
                         $('#btn_Agregar').show();
                         $('#Nombre_Tabla').val('Medicos');
-                        $('.Valores_Atributos').val('idmedico,dni,nombres,Apellidos,fecha_nac,sexo,telefono,correo,estado,direccion,estado,especialidad_codigo');
+                        $('.Valores_Atributos').val('IDMEDICO,DNI,NOMBRES,APELLIDOS,FECHA NACIMIENTO,SEXO,TELEFONO,CORREO,DIRECCION,ESTADO,CODIGO ESPECIALIDAD');
                         $('#Tabla_Mantenimiento').empty();
                         $('#Titulo_Mantenimiento').empty();
                         $('#Titulo_Mantenimiento').text('Mantenimiento de Medicos');
@@ -529,11 +541,11 @@
             event.preventDefault();
              location.href = '#services';
               $.get('Listar_Datos', {
-                        Coleccion : "Consultorios",Atributos:"idConsultorio,ubicacion"
+                        Coleccion : "Consultorios",Atributos:"IDCONSULTORIO,UBICACION"
                 }, function(responseText) {
                         $('#btn_Agregar').show();
                         $('#Nombre_Tabla').val('Consultorios');
-                        $('.Valores_Atributos').val('idConsultorio,ubicacion');
+                        $('.Valores_Atributos').val('IDCONSULTORIO,UBICACION');
                         $('#Tabla_Mantenimiento').empty();
                         $('#Titulo_Mantenimiento').empty();
                         $('#Titulo_Mantenimiento').text('Mantenimiento de Consultorios');
@@ -550,11 +562,11 @@
             event.preventDefault();
              location.href = '#services';
               $.get('Listar_Datos', {
-                        Coleccion : "Especialidades",Atributos:"codigo,nombre,estado,idconsultorio"
+                        Coleccion : "Especialidades",Atributos:"CODIGO,NOMBRE,ESTADO,IDCONSULTORIO"
                 }, function(responseText) {
                         $('#btn_Agregar').show();
                         $('#Nombre_Tabla').val('Especialidades');
-                        $('.Valores_Atributos').val('codigo,nombre,estado,idconsultorio');
+                        $('.Valores_Atributos').val('CODIGO,NOMBRE,ESTADO,IDCONSULTORIO');
                         $('#Tabla_Mantenimiento').empty();
                         $('#Titulo_Mantenimiento').empty();
                         $('#Titulo_Mantenimiento').text('Mantenimiento de Especialidades');

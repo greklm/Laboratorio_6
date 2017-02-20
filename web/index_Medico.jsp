@@ -94,9 +94,15 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
+<<<<<<< HEAD
                      <h1>Centro Medico UNSAAC</h1>
                         <h3>SIEMPRE A TU SERVICIO</h3>
 
+=======
+                        <h1>Centro Medico UNSAAC</h1>
+                        <h3>SIEMPRE A TU SERVICIO</h3>
+                        <hr class="intro-divider">  
+>>>>>>> origin/master
                     </div>
                 </div>
             </div>
@@ -108,17 +114,44 @@
     <!-- /.intro-header -->
 
     <!-- Page Content -->
-
-	<a  name="services"></a>
+<section id="services">
     <div class="content-section-a">
 
+<<<<<<< HEAD
         
+=======
+        <div class="container">
+            <div class="row">
+                
+                    <div class="col-lg-12 col-sm-12" >
+                        <div align="center" class="dataTable_wrapper table-responsive" id="Mantenimiento_Contenido">
+                            
+                            <h1 id="Titulo_Mantenimiento"></h1>
+                            <button id="btn_Agregar" hidden="hidden">Agregar Nuevo</button></br></br>
+                            <input type="hidden" id="Nombre_Tabla" value="">
+                            <input type="hidden" class="Valores_Atributos" value="">
+                            <input type="hidden" class="Valores_Parametros" value="">
+                            <table class="table table-striped table-bordered table-hover" id="Tabla_Mantenimiento">
+                                
+                            </table>
+                            
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+        </div>
+>>>>>>> origin/master
         <!-- /.container -->
 
     </div>
     <!-- /.content-section-a -->
+</section>
+    
+    <!-- /.content-section-a -->
 
-    <div class="content-section-b">
+ <div class="content-section-b">
 
         <div class="container">
 
@@ -126,8 +159,13 @@
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
+<<<<<<< HEAD
                     <h2 class="section-heading">VISIÓN</h2>
                     <p class="lead">La Visión del Centro Universitario de Salud es constituirse en un Establecimiento de Salud de Primer Nivel de Atención, de prestigio, competitivo con otras instituciones del sector, por los logros en la calidad de atención y la satisfacción de las necesidades de los usuarios, con Recursos Humanos motivados, comprometidos, capacitados permanentemente y orgullosos de pertenecer a él, de infraestructura adecuada, equipos modernos, operativos y con proyección a la comunidad.</p>
+=======
+                    <h2 class="section-heading">VISIÃ“N</h2>
+                    <p class="lead">La VisiÃ³n del Centro Universitario de Salud es constituirse en un Establecimiento de Salud de Primer Nivel de AtenciÃ³n, de prestigio, competitivo con otras instituciones del sector, por los logros en la calidad de atenciÃ³n y la satisfacciÃ³n de las necesidades de los usuarios, con Recursos Humanos motivados, comprometidos, capacitados permanentemente y orgullosos de pertenecer a Ã©l, de infraestructura adecuada, equipos modernos, operativos y con proyecciÃ³n a la comunidad.</p>
+>>>>>>> origin/master
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                     <img class="img-responsive" src="img/3.jpg" alt="">
@@ -139,17 +177,19 @@
 
     </div>
     <!-- /.content-section-b -->
-
     <div class="content-section-a">
-
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
+<<<<<<< HEAD
                     <h2 class="section-heading">MISIÓN</h2>
                     <p class="lead">La Misión del Centro Universitario de Salud es brindar atención integral de salud, de tipo ambulatoria a la comunidad universitaria de la Universidad Nacional San Antonio Abad del Cusco, a través de prestaciones de prevención, promoción, recuperación y prestaciones sociales con equidad, solidaridad, eficacia, eficiencia y calidad, primando el empleo racional de los recursos humanos, económicos, materiales y tecnológicos, con la participación activa de la comunidad universitaria, siendo su compromiso el bienestar de la misma.</p>
+=======
+                    <h2 class="section-heading">MISIÃ“N</h2>
+                    <p class="lead">La MisiÃ³n del Centro Universitario de Salud es brindar atenciÃ³n integral de salud, de tipo ambulatoria a la comunidad universitaria de la Universidad Nacional San Antonio Abad del Cusco, a travÃ©s de prestaciones de prevenciÃ³n, promociÃ³n, recuperaciÃ³n y prestaciones sociales con equidad, solidaridad, eficacia, eficiencia y calidad, primando el empleo racional de los recursos humanos, econÃ³micos, materiales y tecnolÃ³gicos, con la participaciÃ³n activa de la comunidad universitaria, siendo su compromiso el bienestar de la misma.</p>
+>>>>>>> origin/master
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/c1.jpg" alt="">
@@ -160,13 +200,17 @@
         <!-- /.container -->
 
     </div>
+
     <!-- /.content-section-a -->
 
-	<a  name="contact"></a>
     <div class="banner">
 
+<<<<<<< HEAD
+=======
+        </div>
+        <!-- /.container -->
+>>>>>>> origin/master
 
-    </div>
     <!-- /.banner -->
 
     <!-- Footer -->
@@ -176,10 +220,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p class="copyright text-muted small">Universidad Nacional de San Antonio Abad del Cusco<br>
+<<<<<<< HEAD
                         Av. de la Cultura, Nro. 733, Cusco - Perú - América Latina<br> 
                         Telf. 51.84.604100 - 51.84.604160 - Fax 51.84.238156<BR>
                         Apartado Postal Nro 921 - Cusco, Perú<br>
 © 2012 webmaster@unsaac.edu.pe</p>
+=======
+                        Av. de la Cultura, Nro. 733, Cusco - PerÃº - AmÃ©rica Latina<br> 
+                        Telf. 51.84.604100 - 51.84.604160 - Fax 51.84.238156<BR>
+                        Apartado Postal Nro 921 - Cusco, PerÃº<br>
+Â© 2012 webmaster@unsaac.edu.pe</p>
+>>>>>>> origin/master
                 </div>
             </div>
         </div>
