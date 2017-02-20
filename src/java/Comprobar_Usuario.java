@@ -42,6 +42,8 @@ public class Comprobar_Usuario extends HttpServlet {
            String Password = request.getParameter("Password").trim();
             //response.sendRedirect("index_Admi.html");
         
+           
+           
            cmongo Conexion = new cmongo();
            DBCollection Info = Conexion.Documentos("Usuarios");
            DBCursor Datos = Info.find();

@@ -4,7 +4,6 @@
     Author     : GREG-PC
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,15 +33,27 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style>
+    .Hora_Cita_Libre:hover{
+	background-color: blue;
+	text-align: center;
+	cursor: pointer;
+}
 
-</head>
+.Hora_Cita_Ocupado:hover{
+	background-color: red;
+	text-align: center;
+	cursor:not-allowed;
+}
+</style>
+    </head>
 
-<body>
+    <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+            <div class="container topnav">
+                <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -50,22 +61,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">Centro MÃ©dico</a>
+                <a class="navbar-brand topnav" href="#">Centro Médico</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#about" id="Registrar_Cita">Reservar Cita</a>
+                        <a href="#about" id="Listar_Citas">Atender Cita</a>
                     </li>
                     <li>
-                        <a href="#services" id="Editar_Informacion">Editar InformaciÃ³n Personal</a>
+                        <a href="#services" id="Editar_Informacion">Editar Información Personal</a>
                     </li>
                     <li>
-                        <a href="#contact">Ver historial mÃ©dico</a>
+                        <a href="#contact" id="Recuperar_Historial">Ver historial médico</a>
                     </li>
                     <li>
-                        <a href="Inicio_Sesion.jsp">Iniciar Sesion</a>
+                        <a href="Inicio_Sesion.jsp">Cerrar Sesion</a>
                     </li>
                 </ul>
             </div>
@@ -83,20 +94,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Landing Page</h1>
-                        <h3>A Template by Start Bootstrap</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>
+                     <h1>Centro Medico UNSAAC</h1>
+                        <h3>SIEMPRE A TU SERVICIO</h3>
+
                     </div>
                 </div>
             </div>
@@ -112,20 +112,7 @@
 	<a  name="services"></a>
     <div class="content-section-a">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
-                </div>
-            </div>
-
-        </div>
+        
         <!-- /.container -->
 
     </div>
@@ -139,11 +126,11 @@
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                    <h2 class="section-heading">VISIÓN</h2>
+                    <p class="lead">La Visión del Centro Universitario de Salud es constituirse en un Establecimiento de Salud de Primer Nivel de Atención, de prestigio, competitivo con otras instituciones del sector, por los logros en la calidad de atención y la satisfacción de las necesidades de los usuarios, con Recursos Humanos motivados, comprometidos, capacitados permanentemente y orgullosos de pertenecer a él, de infraestructura adecuada, equipos modernos, operativos y con proyección a la comunidad.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
+                    <img class="img-responsive" src="img/3.jpg" alt="">
                 </div>
             </div>
 
@@ -161,11 +148,11 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+                    <h2 class="section-heading">MISIÓN</h2>
+                    <p class="lead">La Misión del Centro Universitario de Salud es brindar atención integral de salud, de tipo ambulatoria a la comunidad universitaria de la Universidad Nacional San Antonio Abad del Cusco, a través de prestaciones de prevención, promoción, recuperación y prestaciones sociales con equidad, solidaridad, eficacia, eficiencia y calidad, primando el empleo racional de los recursos humanos, económicos, materiales y tecnológicos, con la participación activa de la comunidad universitaria, siendo su compromiso el bienestar de la misma.</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/phones.png" alt="">
+                    <img class="img-responsive" src="img/c1.jpg" alt="">
                 </div>
             </div>
 
@@ -178,56 +165,21 @@
 	<a  name="contact"></a>
     <div class="banner">
 
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to Start Bootstrap:</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
 
     </div>
     <!-- /.banner -->
 
     <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Universidad Nacional de San Antonio Abad del Cusco<br>
+                        Av. de la Cultura, Nro. 733, Cusco - Perú - América Latina<br> 
+                        Telf. 51.84.604100 - 51.84.604160 - Fax 51.84.238156<BR>
+                        Apartado Postal Nro 921 - Cusco, Perú<br>
+© 2012 webmaster@unsaac.edu.pe</p>
                 </div>
             </div>
         </div>
@@ -242,194 +194,73 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" align="center">InformaciÃ³n Personal</h4>
+          <h4 class="modal-title" align="center">Información Personal</h4>
         </div>
          
             <div class="modal-body">
 
               <form role="form" method="post" action="/pacientes" autocomplete="off">
-            <input type="hidden" name="_token" value="{{csrf_token()}}">
-            <fieldset>
+                <fieldset>
+  
+                <div id="Datos_Personales">
+                </div>
+                </fieldset>
+              </form>
 
-          
-            </div></br>
-
-
-            <div class="form-group">
-                  <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-
-                  <div class="col-md-6 col-xs-10">
-                      <select id="Tipo_Paciente" name="tipo_paciente" placeholder="Tipo Paciente" class="form-control" required>
-                        <option value="ESTUDIANTE">ESTUDIANTE</option>
-                        <option value="PERSONA EXTERNA">PERSONA EXTERNA</option>
-                      </select>
-                  </div>
-            </div></br></br>
-
-
-
-            <div id="Seccion_General">
-                <div class="form-group">
-                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-
-                      <div class="col-md-6 col-xs-10">
-                          <input id="dni" name="dni" placeholder="DNI" class="form-control" required>
-                      </div>
-                </div></br></br>
-
-                <div class="form-group">
-                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-lock bigicon"></i></span>
-                      <div class="col-md-6 col-xs-10">
-                          <input id="Password" type="Password" name="contraseÃ±a" placeholder="Password" class="form-control" required>
-                      </div>
-                </div></br></br>
-
-                <div class="form-group">
-                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-
-                      <div class="col-md-6 col-xs-10">
-                          <input id="Nombres" name="nombres" placeholder="Nombres" class="form-control" required>
-                      </div>
-                </div></br></br>
-
-                <div class="form-group">
-                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-
-                      <div class="col-md-6 col-xs-10">
-                          <input id="Apellidos" name="apellidos" placeholder="Apellidos" class="form-control" required>
-                      </div>
-                </div></br></br>
-
-                <div class="form-group">
-                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-calendar bigicon"></i></span>
-
-                      <div class="col-md-6 col-xs-10">
-                          <input id="Fecha_Nacimiento" name="fecha_nacimiento" type ="date" placeholder="Fecha de Nacimiento" class="form-control" required>
-                      </div>
-                </div></br></br>
-
-               <div class="form-group">
-                    <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-
-                    <div class="col-md-6 col-xs-10">
-                        <select class="form-control" id="Sexo" name="sexo">
-                          <option>MASCULINO</option>
-                          <option>FEMENINO</option>
-                        </select>
-                    </div>
-              </div></br></br>
-
-
-              <div class="form-group">
-                    <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-phone bigicon"></i></span>
-
-                    <div class="col-md-6 col-xs-10">
-                        <input id="Telefono" name="telefono" placeholder="TelÃ©fono" class="form-control" required>
-                    </div>
-              </div></br></br>
-
-                 <div class="form-group">
-                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-
-                      <div class="col-md-6 col-xs-10">
-                          <input id="E_mail" name="correo" placeholder="E-Mail" class="E_mail" required>
-                      </div>
-                </div></br></br>
-
-
-                <div class="form-group">
-                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-home bigicon"></i></span>
-
-                      <div class="col-md-6 col-xs-10">
-                          <input id="Direccion" name="direccion" placeholder="direcciÃ³n" class="form-control" required>
-                      </div>
-                </div></br></br>
-
-                <div class="form-group">
-                      <span class="col-md-1 col-xs-1 col-md-offset-2 text-center"><i class="fa fa-home bigicon"></i></span>
-
-                      <div class="col-md-6 col-xs-10">
-                          <select id="Estado" name="estado" class="form-control">
-                              <option>Habilitado</option>
-                              <option>Deshabilitado</option>
-                          </select>
-
-                      </div>
-                </div></br></br>
-
-
-                <div class="form-group">
-                      <div class="col-md-12 text-center">
-                          <input type="submit" style="width:80px" class="btn btn-success" align="center" class="form-control" value="Guardar">
-                          <button type="reset" style="width:80px" class="btn btn-primary" class="form-control" >Limpiar</button>
-
-                      </div>
-                </div></br></br>
-            </div>
-            </fieldset>
-
-
-       </form>
-
-              </div>
-              <input name="Id_Paciente" id="Id_Paciente" type="hidden" value="{{Auth::user()->dni}}">
-            </div>
-
-            <div class="modal-footer">
-              
             </div>
       </div>
 
     </div>
   </div>
     
-    
-    <div class="modal fade" id="Mo_Registrar_Cita" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" align="center">Registrar Cita</h4>
-        </div>
-          <form role="form" method="get" action="/reservas_Almacenar" autocomplete="off">
-            <input type="hidden" name="_token" value="{{csrf_token()}}">
-            <div class="modal-body">
-
-              <div id="Datos_Reserva">
-
-              </div>
-              <input name="Id_Paciente" id="Id_Paciente" type="hidden" value="{{Auth::user()->dni}}">
-            </div>
-
-            <div class="modal-footer">
-              <input type="submit" class="btn btn-primary" value="Confirmar">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            </div>
-          </form>
-      </div>
-    </div>
-  </div>
     
    
-  <div class="modal fade" id="Mo_Especialidades" role="dialog" >
+<div class="modal fade" id="Mo_Lista_Citas" role="dialog" >
     <div class="modal-dialog" role="document">
 	<div class="modal-content">
-            <div class="modal-header">
-                    <h3 align="center" >Reservar una cita</h3><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-header" align="center">
+                    <label style="font-size: 20px">Reservar una cita</label><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body"  align="center">
-                <div id="Lista_Consultorios">
+                <div id="Lista_Citas">
                 </div>
             </div>
             <div class="modal-footer" style="display:block;margin-left:0%;">
-              <button id="btn_Mostrar_Horario" style="width:250px"  type="button" class="btn btn-primary">Siguiente</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
             </div>
 	</div>
     </div>
 </div>
   
+  
+  <div class="modal fade" id="Mo_Horario" role="dialog" >
+    <div class="modal-dialog" role="document">
+	<div class="modal-content">
+            <div class="modal-header" align="center">
+                    <label style="font-size: 20px">Horario</label><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body"  align="center">
+                <div id="Horario">
+                </div>
+            </div>
+           
+	</div>
+    </div>
+</div>
+  <div class="modal fade" id="Mo_Registrar_Cita" role="dialog" >
+    <div class="modal-dialog" role="document">
+	<div class="modal-content">
+            <div class="modal-header" align="center">
+                    <label style="font-size: 20px">Datos de la cita</label><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body"  align="center">
+                <div id="Datos_Reserva">
+                </div>
+            </div>
+	</div>
+    </div>
+</div>
+
   
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -441,17 +272,22 @@
  $(document).ready(function() {
           $("#Editar_Informacion").click(function(event){
             event.preventDefault();
-             $('#Mo_Editar_Informacion').modal({
-             show: 'true'
-           });
+            $.get('Cargar_Datos_Personales_Paciente', {}, function(responseText) {
+            
+                $('#Datos_Personales').empty();
+                $('#Datos_Personales').append(responseText);
+                 $('#Mo_Editar_Informacion').modal({
+                  show: 'true'
+                });
+               });
            });
            
-        $("#Registrar_Cita").click(function(event){
-         $.get('Listar_Especialidades', {}, function(responseText) {
-             $('#Lista_Consultorios').empty();
-             $('#Lista_Consultorios').append(responseText);
-             $('#Mo_Especialidades').modal({
-             show: 'true'
+        $("#Listar_Citas").click(function(event){
+         $.get('Recuperar_Citas_Pendientes', {}, function(responseText) {
+             $('#Lista_Citas').empty();
+             $('#Lista_Citas').append(responseText);
+             $('#Mo_Lista_Citas').modal({
+                show: 'true'
             });
          });  
 
@@ -473,12 +309,29 @@ $("#btn_Mostrar_Horario").click(function(event){
 $("#btn_Mostrar_Horario").click(function(event){
     var Especialidad = $("#Especialidad_Cita").val();
  $.get('Recuperar_Horario', {Especialidad:Especialidad}, function(responseText) {
-     alert(responseText);
+     $('#Horario').empty();
+     $('#Horario').append(responseText);
+     $('#Mo_Horario').modal({
+     show: 'true'
+    });
      
  });  
 });
+$(document).on('click', '.Hora_Cita_Libre', function(event) { 
+    var Id_Horario = $(this).attr("value");
+    var Especialidad = $("#Especialidad_Cita").val();
+ $.get('Recuperar_Datos_Cita', {Id_Horario:Id_Horario,Especialidad:Especialidad}, function(responseText) {
+     $('#Datos_Reserva').empty();
+     $('#Datos_Reserva').append(responseText);
+     $('#Mo_Registrar_Cita').modal({
+     show: 'true'
+    });
+ });  
+});
+</script>
+<script>
+    
 </script>
 </body>
 
 </html>
-

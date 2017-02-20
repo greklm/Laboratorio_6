@@ -31,6 +31,7 @@ public class cmongo {
     }
     public cmongo()
     {
+        //cliente=new MongoClient("192.168.43.40",27017);
         cliente=new MongoClient("127.0.0.1",27017);
         baseDatos=cliente.getDatabase("bdClinica");
         bd=cliente.getDB("bdClinica");
@@ -92,4 +93,5 @@ public class cmongo {
         DBCursor cursor = colecciones.find(whereQuery);
          return cursor;
     }
+    
 }

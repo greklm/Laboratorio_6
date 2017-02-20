@@ -187,9 +187,9 @@ public final class Inicio_005fSesion_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\n");
       out.write("            <form action=\"Comprobar_Usuario\" method=\"get\">\n");
       out.write("\n");
-      out.write("                <input type=\"text\" required value=\"Usuario\"> <!-- JS because of IE support; better: placeholder=\"Email\" -->\n");
+      out.write("                <input id=\"DNI\" name=\"DNI\" type=\"text\" required value=\"Usuario\"> <!-- JS because of IE support; better: placeholder=\"Email\" -->\n");
       out.write("\n");
-      out.write("                <input type=\"password\" required value=\"Password\" onBlur=\"if(this.value=='')this.value='Password'\" onFocus=\"if(this.value=='Password')this.value='' \"> <!-- JS because of IE support; better: placeholder=\"Password\" -->\n");
+      out.write("                <input id=\"Password\" name=\"Password\" type=\"password\" required value=\"Password\" onBlur=\"if(this.value=='')this.value='Password'\" onFocus=\"if(this.value=='Password')this.value='' \"> <!-- JS because of IE support; better: placeholder=\"Password\" -->\n");
       out.write("\n");
       out.write("                <input href=\"\" type=\"submit\" value=\"Ingresar\">\n");
       out.write("\n");
