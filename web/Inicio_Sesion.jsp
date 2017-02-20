@@ -146,11 +146,11 @@ input[type="submit"] { cursor: pointer; }
 
         <fieldset>
 
-            <form action="index.html" method="get">
+            <form action="Comprobar_Usuario" method="get">
 
-                <input type="text" required value="Usuario"> <!-- JS because of IE support; better: placeholder="Email" -->
+                <input id="DNI" name="DNI" type="text" required value="Usuario"> <!-- JS because of IE support; better: placeholder="Email" -->
 
-                <input type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "> <!-- JS because of IE support; better: placeholder="Password" -->
+                <input id="Password" name="Password" type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "> <!-- JS because of IE support; better: placeholder="Password" -->
 
                 <input href="" type="submit" value="Ingresar">
 

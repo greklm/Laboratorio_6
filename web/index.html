@@ -27,15 +27,27 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style>
+    .Hora_Cita_Libre:hover{
+	background-color: blue;
+	text-align: center;
+	cursor: pointer;
+}
 
-</head>
+.Hora_Cita_Ocupado:hover{
+	background-color: red;
+	text-align: center;
+	cursor:not-allowed;
+}
+</style>
+    </head>
 
-<body>
+    <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+            <div class="container topnav">
+                <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -377,40 +389,12 @@
   </div>
     
     
-    <div class="modal fade" id="Mo_Registrar_Cita" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" align="center">Registrar Cita</h4>
-        </div>
-          <form role="form" method="get" action="/reservas_Almacenar" autocomplete="off">
-            <input type="hidden" name="_token" value="{{csrf_token()}}">
-            <div class="modal-body">
-
-              <div id="Datos_Reserva">
-
-              </div>
-              <input name="Id_Paciente" id="Id_Paciente" type="hidden" value="{{Auth::user()->dni}}">
-            </div>
-
-            <div class="modal-footer">
-              <input type="submit" class="btn btn-primary" value="Confirmar">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            </div>
-          </form>
-      </div>
-    </div>
-  </div>
-    
    
-  <div class="modal fade" id="Mo_Especialidades" role="dialog" >
+<div class="modal fade" id="Mo_Especialidades" role="dialog" >
     <div class="modal-dialog" role="document">
 	<div class="modal-content">
-            <div class="modal-header">
-                    <h3 align="center" >Reservar una cita</h3><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-header" align="center">
+                    <label style="font-size: 20px">Reservar una cita</label><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body"  align="center">
                 <div id="Lista_Consultorios">
@@ -423,6 +407,36 @@
     </div>
 </div>
   
+  
+  
+  <div class="modal fade" id="Mo_Horario" role="dialog" >
+    <div class="modal-dialog" role="document">
+	<div class="modal-content">
+            <div class="modal-header" align="center">
+                    <label style="font-size: 20px">Horario</label><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body"  align="center">
+                <div id="Horario">
+                </div>
+            </div>
+           
+	</div>
+    </div>
+</div>
+  <div class="modal fade" id="Mo_Registrar_Cita" role="dialog" >
+    <div class="modal-dialog" role="document">
+	<div class="modal-content">
+            <div class="modal-header" align="center">
+                    <label style="font-size: 20px">Datos de la cita</label><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body"  align="center">
+                <div id="Datos_Reserva">
+                </div>
+            </div>
+	</div>
+    </div>
+</div>
+
   
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -460,8 +474,32 @@ $("#btn_Mostrar_Horario").click(function(event){
      show: 'true'
     });
  });  
-
 });
+</script>
+<script>
+$("#btn_Mostrar_Horario").click(function(event){
+    var Especialidad = $("#Especialidad_Cita").val();
+ $.get('Recuperar_Horario', {Especialidad:Especialidad}, function(responseText) {
+     $('#Horario').empty();
+     $('#Horario').append(responseText);
+     $('#Mo_Horario').modal({
+     show: 'true'
+    });
+     
+ });  
+});
+$(document).on('click', '.Hora_Cita_Libre', function(event) { 
+    var Id_Horario = $(this).attr("value");
+    var Especialidad = $("#Especialidad_Cita").val();
+ $.get('Recuperar_Datos_Cita', {Id_Horario:Id_Horario,Especialidad:Especialidad}, function(responseText) {
+     $('#Datos_Reserva').empty();
+     $('#Datos_Reserva').append(responseText);
+     $('#Mo_Registrar_Cita').modal({
+     show: 'true'
+    });
+ });  
+});
+
 </script>
 </body>
 

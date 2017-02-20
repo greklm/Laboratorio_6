@@ -80,5 +80,16 @@ public class cmongo {
         Insertar(Coleccion,Parametros,Atributos);
     }
     
-    
+    public DBCursor Registro(String[] Filtros,String[] Valores,String Coleccion)
+    {
+        BasicDBObject whereQuery = new BasicDBObject();
+        DBCollection colecciones=bd.getCollection(Coleccion);
+        for(int i=0;i<Filtros.length;i++)
+        {
+         whereQuery.put(Filtros[i], Valores[i]);   
+        }
+        
+        DBCursor cursor = colecciones.find(whereQuery);
+         return cursor;
+    }
 }
